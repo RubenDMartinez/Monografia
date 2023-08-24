@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Acceder">
+        <menu>
+            <item
+                android:id="@+id/Tienda"
+                android:icon="@drawable/ic_store"
+                android:title="Mi tienda">
+            </item>
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/Mis_Com"
+                android:icon="@drawable/ic_shop"
+                android:title="Mis compras">
+            </item>
+            <item
+                android:id="@+id/Mis_Fav"
+                android:icon="@drawable/ic_favorite"
+                android:title="Favoritos">
+            </item>
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/Perf"
+                android:icon="@drawable/ic_perf"
+                android:title="Mi perfil">
+            </item>
+            <item
+                android:id="@+id/Conf"
+                android:icon="@drawable/ic_config"
+                android:title="Configuracion">
+            </item>
+        </menu>
+    </item>
+
+    <item android:title="Cerrar Sesion">
+        <menu>
+            <item
+                android:id="@+id/Cer_Ses"
+                android:icon="@drawable/ic_logout"
+                android:title="Cerrar Sesion">
+            </item>
+        </menu>
+    </item>
+
+</menu>
