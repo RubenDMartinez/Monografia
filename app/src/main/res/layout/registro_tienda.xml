@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Registro_Tienda">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR TIENDA"
+        android:textSize="23sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtNom_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:textColorHint="@color/gray"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/txtDes_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:textColorHint="@color/gray"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/txtDir_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:textColorHint="@color/gray"
+                android:inputType="textPostalAddress"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/txtBar_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Barrio"
+                android:textColorHint="@color/gray"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/txtCiu_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciudad"
+                android:textColorHint="@color/gray"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/txtDep_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Departamento"
+                android:textColorHint="@color/gray"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/txtCel_Tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numero de contacto"
+                android:textColorHint="@color/gray"
+                android:inputType="phone"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btnTerReg_Tie"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Registrar tienda"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/SecondaryColor"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:onClick="CambioPri_Com"/>
+
+            <Button
+                android:id="@+id/btnVol_Pri"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Volver"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/SecondaryColor"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:onClick="CambioPri_Com2"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -14,13 +14,19 @@ public class Iniciar_Sesion extends AppCompatActivity {
         setContentView(R.layout.iniciar_sesion);
     }
 
-    public void CambioReg (View view) {
-        Intent Cambiar = new Intent(this, Registro.class);
+    public void CambioReg_Usu (View view) {
+        Intent Cambiar = new Intent(this, Registro_Usuario.class);
         startActivity(Cambiar);
     }
 
-    public void CambioIni (View view) {
-        Intent Cambiar = new Intent(this, Principal_ST.class);
+    public void CambioPri_Usu (View view) {
+        Intent Cambiar = new Intent(this, Principal_Comp.class);
         startActivity(Cambiar);
     }
+
+    public void CambioReg_Tie (View view) {
+        Intent Cambiar = new Intent(this, Registro_Tienda.class);
+        startActivity(Cambiar);
+    }
+
 }

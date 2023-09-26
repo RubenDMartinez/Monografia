@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="UdeC.Monografia">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -15,13 +16,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Monografia"
         tools:targetApi="31">
+
         <activity
-            android:name=".Principal_ST"
+            android:name=".Principal_Comp"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
+
         <activity
-            android:name=".Registro"
+            android:name=".Registro_Tienda"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
+
+        <activity
+            android:name=".Registro_Usuario"
+            android:exported="false" />
+
         <activity
             android:name=".Iniciar_Sesion"
             android:exported="true">

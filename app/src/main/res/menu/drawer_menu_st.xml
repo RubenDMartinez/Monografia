@@ -5,7 +5,7 @@
     <item android:title="Acceder">
         <menu>
             <item
-                android:id="@+id/Tienda"
+                android:id="@+id/Mi_Tie"
                 android:icon="@drawable/ic_store"
                 android:title="Mi tienda">
             </item>

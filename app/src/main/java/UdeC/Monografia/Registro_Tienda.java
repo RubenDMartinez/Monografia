@@ -8,14 +8,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Fragment_Cre_Tie extends AppCompatActivity {
+public class Registro_Tienda extends AppCompatActivity {
 
-    EditText camp1, camp2, camp3, camp4, camp5, camp6, camp7;
+    EditText  camp1, camp2, camp3, camp4, camp5, camp6, camp7;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_cre_tie);
+        setContentView(R.layout.registro_tienda);
 
         camp1 = (EditText)findViewById(R.id.txtNom_Tie);
         camp2 = (EditText)findViewById(R.id.txtDes_Tie);
@@ -30,43 +30,48 @@ public class Fragment_Cre_Tie extends AppCompatActivity {
         boolean retorno = true;
 
         String nomb = camp1.getText().toString();
-        String apel = camp2.getText().toString();
-        String cedu = camp3.getText().toString();
-        String naci = camp4.getText().toString();
-        String celu = camp5.getText().toString();
-        String emai = camp6.getText().toString();
-        String barr = camp7.getText().toString();
+        String desc = camp2.getText().toString();
+        String dire = camp3.getText().toString();
+        String barr = camp4.getText().toString();
+        String ciud = camp5.getText().toString();
+        String depa = camp6.getText().toString();
+        String celu = camp7.getText().toString();
 
         if (nomb.isEmpty()) {
             camp1.setError("Este campo no puede quedar vacio");
             retorno = false;
-        } if (apel.isEmpty()) {
+        } if (desc.isEmpty()) {
             camp2.setError("Este campo no puede quedar vacio");
             retorno = false;
-        } if (cedu.isEmpty()) {
+        } if (dire.isEmpty()) {
             camp3.setError("Este campo no puede quedar vacio");
             retorno = false;
-        } if (naci.isEmpty()) {
+        } if (barr.isEmpty()) {
             camp4.setError("Este campo no puede quedar vacio");
             retorno = false;
-        } if (celu.isEmpty()) {
+        } if (ciud.isEmpty()) {
             camp5.setError("Este campo no puede quedar vacio");
             retorno = false;
-        } if (emai.isEmpty()) {
+        } if (depa.isEmpty()) {
             camp6.setError("Este campo no puede quedar vacio");
             retorno = false;
-        } if (barr.isEmpty()) {
+        } if (celu.isEmpty()) {
             camp7.setError("Este campo no puede quedar vacio");
         }
         return retorno;
     }
 
-    public void CambioPrinST(View view) {
+    public void CambioPri_Com (View view) {
         if (validar()) {
-            Toast.makeText(this, "Datos agregados", Toast.LENGTH_SHORT).show();
-            Intent Cambiar = new Intent(this, Registro.class);
+            Toast.makeText(this, "Tienda creada exitosamente", Toast.LENGTH_SHORT).show();
+            Intent Cambiar = new Intent(this, Principal_Comp.class);
             startActivity(Cambiar);
         }
+    }
+
+    public void CambioPri_Com2 (View view) {
+        Intent Cambiar = new Intent(this, Principal_Comp.class);
+        startActivity(Cambiar);
     }
 
 }

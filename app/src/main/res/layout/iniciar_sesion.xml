@@ -48,15 +48,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Ingresar"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="300dp"
         android:layout_marginBottom="15dp"
         android:textColor="@color/white"
-        android:backgroundTint="@color/colorSecondary"
-        android:shadowColor="@color/colorPrimary"
+        android:backgroundTint="@color/SecondaryColor"
+        android:shadowColor="@color/PrimaryColor"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="2"
-        android:onClick="CambioIni"/>
+        android:onClick="CambioPri_Usu"/>
 
     <Button
         android:id="@+id/btnReg"
@@ -67,11 +67,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp"
         android:textColor="@color/white"
-        android:backgroundTint="@color/colorSecondary"
-        android:shadowColor="@color/colorPrimary"
+        android:backgroundTint="@color/SecondaryColor"
+        android:shadowColor="@color/PrimaryColor"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="2"
-        android:onClick="CambioReg"/>
+        android:onClick="CambioReg_Usu"/>
 
 </LinearLayout>

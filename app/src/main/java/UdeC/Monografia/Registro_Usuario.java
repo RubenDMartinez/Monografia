@@ -1,20 +1,29 @@
 package UdeC.Monografia;
 
+import static java.lang.String.valueOf;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import UdeC.Monografia.connection.usuario;
+import UdeC.Monografia.connection.connectionsql;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Registro extends AppCompatActivity {
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Registro_Usuario extends AppCompatActivity {
     EditText camp1, camp2, camp3, camp4, camp5, camp6, camp7, camp8, camp9, camp10, camp11, camp12, camp13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registro);
+        setContentView(R.layout.registro_usuario);
 
         camp1 = (EditText)findViewById(R.id.txtNom_Usu);
         camp2 = (EditText)findViewById(R.id.txtApe_Usu);
@@ -31,22 +40,39 @@ public class Registro extends AppCompatActivity {
         camp13 = (EditText)findViewById(R.id.txtCon_Usu);
     }
 
+    //int cedula = Integer.parseInt(cedu);
+    //int celular = Integer.parseInt(celu);
+
     public boolean validar() {
         boolean retorno = true;
 
-        String nomb = camp1.getText().toString();
-        String apel = camp2.getText().toString();
-        String cedu = camp3.getText().toString();
-        String naci = camp4.getText().toString();
-        String celu = camp5.getText().toString();
-        String emai = camp6.getText().toString();
-        String barr = camp7.getText().toString();
-        String ciud = camp8.getText().toString();
-        String depa = camp9.getText().toString();
-        String dire = camp10.getText().toString();
-        String apar = camp11.getText().toString();
-        String usua = camp12.getText().toString();
-        String cont = camp13.getText().toString();
+        String nomb;
+        String apel;
+        String cedu;
+        String naci;
+        String celu;
+        String emai;
+        String barr;
+        String ciud;
+        String depa;
+        String dire;
+        String apar;
+        String usua;
+        String cont;
+
+        nomb = camp1.getText().toString();
+        apel = camp2.getText().toString();
+        cedu = camp3.getText().toString();
+        naci = camp4.getText().toString();
+        celu = camp5.getText().toString();
+        emai = camp6.getText().toString();
+        barr = camp7.getText().toString();
+        ciud = camp8.getText().toString();
+        depa = camp9.getText().toString();
+        dire = camp10.getText().toString();
+        apar = camp11.getText().toString();
+        usua = camp12.getText().toString();
+        cont = camp13.getText().toString();
 
         if (nomb.isEmpty()) {
             camp1.setError("Este campo no puede quedar vacio");
@@ -90,63 +116,12 @@ public class Registro extends AppCompatActivity {
         return retorno;
     }
 
-    public void Cambio(View view) {
+    public void Cambio (View view) {
         if (validar()) {
             Toast.makeText(this, "Datos agregados", Toast.LENGTH_SHORT).show();
             Intent Cambiar = new Intent(this, Iniciar_Sesion.class);
             startActivity(Cambiar);
         }
     }
+
 }
-
-/*      datos = new ArrayList<String>();
-        datos.set(0,String.valueOf("findViewById(R.id.txtNom)"));
-        datos.set(1,String.valueOf("findViewById(R,id,txtApe)"));
-        datos.set(2,String.valueOf("findViewById(R.id.txtCed)"));
-        datos.set(3,String.valueOf("findViewById(R.id.txtNac)"));
-        datos.set(4,String.valueOf("findViewById(R.id.txtCel)"));
-        datos.set(5,String.valueOf("findViewById(R,id,txtEml)"));
-        datos.set(6,String.valueOf("findViewById(R.id.txtDir)"));
-        datos.set(7,String.valueOf("findViewById(R.id.txtCiu)"));
-        datos.set(8,String.valueOf("findViewById(R,id,txtBar)"));
-        datos.set(9,String.valueOf("findViewById(R.id.txtUsu)"));
-        datos.set(10,String.valueOf("findViewById(R.id.txtCon)"));
-*/
-
-/*
-
-public class Dato {
-
-        public Dato (String Nomb, String Apel, String Ced, String Naci, String Celu, String Emai, String Dire, String Ciud, String Barr, String Usua, String Contr) {
-
-        }
-
-    }
-
-        EditText camp1 = findViewById(R.id.txtNom);
-        EditText camp2 = findViewById(R.id.txtApe);
-        EditText camp3 = findViewById(R.id.txtCed);
-        EditText camp4 = findViewById(R.id.txtNac);
-        EditText camp5 = findViewById(R.id.txtCel);
-        EditText camp6 = findViewById(R.id.txtEml);
-        EditText camp7 = findViewById(R.id.txtDir);
-        EditText camp8 = findViewById(R.id.txtCiu);
-        EditText camp9 = findViewById(R.id.txtBar);
-        EditText camp10 = findViewById(R.id.txtUsu);
-        EditText camp11 = findViewById(R.id.txtCon);
-
-        String nomb = camp1.getText().toString();
-        String apel = camp2.getText().toString();
-        String cedu = camp3.getText().toString();
-        String naci = camp4.getText().toString();
-        String celu = camp5.getText().toString();
-        String emai = camp6.getText().toString();
-        String dire = camp7.getText().toString();
-        String ciud = camp8.getText().toString();
-        String barr = camp9.getText().toString();
-        String usua = camp10.getText().toString();
-        String cont = camp11.getText().toString();
-
-        Dato datosN = new Dato(nomb, apel, cedu, naci, celu, emai, dire, ciud, barr, usua, cont);
-        datos.add(datosN);
-*/

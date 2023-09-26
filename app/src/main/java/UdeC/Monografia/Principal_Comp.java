@@ -1,5 +1,6 @@
 package UdeC.Monografia;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -14,11 +15,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import UdeC.Monografia.Fragments.Fragment_Cre_Tie;
-import UdeC.Monografia.Fragments.Fragment_Mis_Com;
 import com.google.android.material.navigation.NavigationView;
 
-public class Principal_ST extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Principal_Comp extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -32,7 +31,7 @@ public class Principal_ST extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.principal_st);
+        setContentView(R.layout.principal_comp);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,10 +47,10 @@ public class Principal_ST extends AppCompatActivity implements NavigationView.On
         actionBarDrawerToggle.syncState();
 
         //Cargar fragment principal
-        fragmentManager = getSupportFragmentManager();
+        /*fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container, new Fragment_Cre_Tie());
-        fragmentTransaction.commit();
+        fragmentTransaction.add(R.id.container, new Fragment_Crea_Tien());
+        fragmentTransaction.commit();*/
     }
 
     @Override
@@ -59,25 +58,33 @@ public class Principal_ST extends AppCompatActivity implements NavigationView.On
 
         drawerLayout.closeDrawer(GravityCompat.START);
 
-        if (menuItem.getItemId() == R.id.Tienda) {
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, new Fragment_Cre_Tie());
+        if (menuItem.getItemId() == R.id.Mi_Tie) {
+
+            Toast.makeText(this, "Crear nueva tienda", Toast.LENGTH_SHORT).show();
+            Intent Cambiar = new Intent(this, Registro_Tienda.class);
+            startActivity(Cambiar);
+            ;
+            /*fragmentManager = getSupportFragmentManager();
+            fragmentTransaction =fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container, new Fragment_Crea_Tien());
             fragmentTransaction.commit();
+
+            Context context = getApplicationContext();
+            CharSequence  text = "Registrar nueva tienda.";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();*/
         }
+
         if (menuItem.getItemId() == R.id.Mis_Com) {
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, new Fragment_Mis_Com());
-            fragmentTransaction.commit();
+
         }
-        
+
         if (menuItem.getItemId() == R.id.Cer_Ses) {
             Toast.makeText(this, "Sesion cerrada", Toast.LENGTH_SHORT).show();
             Intent Cambiar = new Intent(this, Iniciar_Sesion.class);
             startActivity(Cambiar);
         }
-
         return false;
     }
 }

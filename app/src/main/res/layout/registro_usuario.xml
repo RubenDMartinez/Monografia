@@ -10,7 +10,7 @@
     android:paddingTop="16dp"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Registro">
+    tools:context=".Registro_Usuario">
 
     <TextView
         android:layout_width="wrap_content"
@@ -170,12 +170,11 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/colorSecondary"
+                android:backgroundTint="@color/SecondaryColor"
                 android:shadowColor="@color/black"
                 android:shadowDx="1"
                 android:shadowDy="1"
-                android:shadowRadius="2"
-                android:onClick="Cambio"/>
+                android:shadowRadius="2" />
 
         </LinearLayout>
 

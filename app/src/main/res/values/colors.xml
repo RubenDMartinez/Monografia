@@ -8,7 +8,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#3944BC</color>
     <color name="orange">#FF8000</color>
-    <color name="colorPrimary">#D1BCFF</color>
-    <color name="colorSecondary">#FF6200EE</color>
+    <color name="PrimaryColor">#D1BCFF</color>
+    <color name="SecondaryColor">#FF6200EE</color>
     <color name="gray">#B5B5B5</color>
 </resources>
